@@ -46,7 +46,7 @@ namespace Barcode_Assignment_Checker
             lblCourse.Text = "";
         }
 
-        private void txtInput_KeyUp(object sender, KeyEventArgs e)
+        private void handleInput()
         {
             // TODO parse barcode entry
             // BARCODE: ##### ##### STUDENT_ID COURSE_ID
@@ -99,6 +99,11 @@ namespace Barcode_Assignment_Checker
             txtInput.Text = "";
         }
 
+        private void txtInput_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             timer2.Enabled = false;
@@ -139,6 +144,9 @@ namespace Barcode_Assignment_Checker
             {
                 nonNumberEntered = true;
             }
+
+            if (e.KeyCode == Keys.Enter)
+                handleInput();
         }
 
         // This event occurs after the KeyDown event and can be used to prevent 

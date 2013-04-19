@@ -39,6 +39,7 @@ bin
 lib
 obj
 ipch
+publish
 
 .lvimrc
 .syntastic_cpp_config
